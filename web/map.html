@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>欧洲互动地图 — 涉华投资审查案例库</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>欧洲互动地图</h1>
+    <p class="subtitle">基于 Natural Earth GeoJSON 精确国界 · 点击国家查看涉华 FDI 审查案例</p>
+    <nav class="nav-bar">
+      <a href="index.html">案例总览</a>
+      <a href="map.html" class="active">🗺 欧洲互动地图</a>
+      <a href="policy.html">政策与法律框架</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="country-idiom-banner" class="country-idiom-banner hidden" aria-live="polite">
+      <div class="idiom-flag-wrap">
+        <img id="idiom-flag" class="idiom-flag" src="" alt="" width="80" height="54" />
+      </div>
+      <div class="idiom-text">
+        <h2 id="idiom-country-name" class="idiom-country-name"></h2>
+        <blockquote id="idiom-original" class="idiom-original" lang="und"></blockquote>
+        <p id="idiom-zh" class="idiom-zh"></p>
+      </div>
+    </section>
+
+    <div class="meta-bar">
+      <span class="badge">最后更新: <strong id="last-updated">—</strong></span>
+      <span class="badge">按执法风格着色</span>
+      <span class="badge"><a href="policy.html#cases">风格说明 ↗</a></span>
+    </div>
+
+    <div class="map-hero card">
+      <h2>点击国家进入案例库</h2>
+      <p style="color:var(--muted);margin-bottom:1rem">
+        地图颜色表示该国对涉华投资的典型<strong>执法风格</strong>（依据本库案例推断）。悬停可查看风格与案例数。
+      </p>
+      <div id="leaflet-map" role="application" aria-label="欧洲 GeoJSON 地图"></div>
+      <div class="map-toolbar">
+        <button type="button" class="map-chip" id="btn-eu-cases" title="欧盟 FDI 合作机制层面案例/统计">
+          🇪🇺 欧盟合作机制案例
+        </button>
+        <button type="button" class="map-chip secondary" id="btn-reset-view">重置视图</button>
+      </div>
+      <div class="map-legend map-legend-styles">
+        <span><span class="legend-dot legend-style-hard"></span>硬否决型</span>
+        <span><span class="legend-dot legend-style-cond"></span>条件管控型</span>
+        <span><span class="legend-dot legend-style-open"></span>吸引投资型</span>
+        <span><span class="legend-dot legend-style-quiet"></span>机制完善·个案少</span>
+        <span><span class="legend-dot legend-selected"></span>当前选中</span>
+      </div>
+    </div>
+
+    <div id="country-panel" class="country-panel">
+      <div class="card empty-state">请在上方地图中选择一个国家，或点击「欧盟合作机制案例」</div>
+    </div>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script type="module" src="js/map.js"></script>
+</body>
+</html>

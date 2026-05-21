@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>欧盟及欧洲涉华企业投资审查案例库</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>欧盟及欧洲范围 · 涉中国企业投资审查案例库</h1>
+    <p class="subtitle">EU &amp; Europe FDI Screening Cases Involving Chinese Investors — 表格、图表与互动地图</p>
+    <nav class="nav-bar">
+      <a href="index.html" class="active">案例总览</a>
+      <a href="map.html">🗺 欧洲互动地图</a>
+      <a href="policy.html">政策与法律框架</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="meta-bar">
+      <span class="badge">案例数: <strong id="case-count">—</strong></span>
+      <span class="badge">最后更新: <strong id="last-updated">—</strong></span>
+      <span class="badge">自动更新: 每周一 09:00</span>
+    </div>
+
+    <p>
+      <a class="btn-map" href="map.html">进入欧洲互动地图 → 点击国家查看案例</a>
+      <a class="btn-map btn-map-secondary" href="policy.html" style="margin-left:0.75rem">政策与法律框架 →</a>
+    </p>
+
+    <section class="card podcast-card" id="podcast-section" style="margin-bottom:1.5rem">
+      <div class="podcast-header">
+        <h2>🎙 每周播客 · 审查趋势周评</h2>
+        <span class="badge podcast-badge" id="podcast-badge">每周一更新</span>
+      </div>
+      <p class="podcast-desc">根据案例库自动生成的约 800 字中文周评，点评执法趋势与重点案件（AI 语音合成，仅供研究参考）。</p>
+      <div id="podcast-player-wrap" class="podcast-player-wrap hidden">
+        <p class="podcast-meta"><strong id="podcast-title">—</strong> · <span id="podcast-date">—</span> · 约 <span id="podcast-duration">—</span> 分钟</p>
+        <audio id="podcast-audio" controls preload="metadata" class="podcast-audio">
+          您的浏览器不支持音频播放。
+        </audio>
+        <details class="podcast-script-details">
+          <summary>查看本期文稿</summary>
+          <div id="podcast-script" class="podcast-script"></div>
+        </details>
+        <ul id="podcast-highlights" class="podcast-highlights"></ul>
+      </div>
+      <p id="podcast-empty" class="empty-state">播客尚未生成，请运行 <code>py -3 scripts/generate_podcast.py</code> 或等待每周一自动更新。</p>
+    </section>
+
+    <section class="grid-2">
+      <div class="card">
+        <h2>各国/地区案例数量</h2>
+        <div class="chart-container"><canvas id="chart-country"></canvas></div>
+      </div>
+      <div class="card">
+        <h2>审查结果分布</h2>
+        <div class="chart-container"><canvas id="chart-outcome"></canvas></div>
+      </div>
+    </section>
+
+    <div class="card" style="margin-bottom:1.5rem">
+      <h2>案例决定年份趋势</h2>
+      <div class="chart-container"><canvas id="chart-timeline"></canvas></div>
+    </div>
+
+    <div class="card" style="margin-bottom:1.5rem">
+      <h2>欧盟委员会政策动态（自动抓取）</h2>
+      <ul class="framework-list" id="framework-updates"></ul>
+    </div>
+
+    <div class="card">
+      <h2>案例资料表</h2>
+      <div class="filters">
+        <select id="filter-country"><option value="">全部国家</option></select>
+        <select id="filter-outcome">
+          <option value="">全部结果</option>
+          <option value="禁止">禁止</option>
+          <option value="附条件批准">附条件批准</option>
+          <option value="批准">批准</option>
+          <option value="政府干预">政府干预</option>
+          <option value="交易失败">交易失败</option>
+          <option value="审查中">审查中</option>
+          <option value="无公开否决">无公开否决</option>
+          <option value="机制运行">机制运行</option>
+        </select>
+        <select id="filter-sector"><option value="">全部行业</option></select>
+        <input type="search" id="filter-search" placeholder="搜索企业、投资者…" />
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>国家</th>
+              <th>目标企业/资产</th>
+              <th>中国投资者</th>
+              <th>行业</th>
+              <th>决定日期</th>
+              <th>结果</th>
+              <th>摘要</th>
+            </tr>
+          </thead>
+          <tbody id="cases-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="disclaimer" id="disclaimer-text"></div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

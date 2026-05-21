@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>政策与法律框架 — 欧盟对华投资审查案例库</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>欧盟对华投资审查：法律与政策框架</h1>
+    <p class="subtitle">可视化专题 · 法律依据 · 2025+ 趋势 · 案例特征 · 专家洞见</p>
+    <nav class="nav-bar">
+      <a href="index.html">案例总览</a>
+      <a href="map.html">🗺 欧洲互动地图</a>
+      <a href="policy.html" class="active">政策与法律框架</a>
+    </nav>
+  </header>
+
+  <main class="container policy-page">
+    <!-- KPI 要点 -->
+    <section class="policy-hero card">
+      <div class="hero-highlights">
+        <span class="highlight-pill">双层结构：欧盟协调 + 各国执法</span>
+        <span class="highlight-pill accent">2025.12 修订政治协议</span>
+        <span class="highlight-pill warn">半导体 · 基础设施成高频敏感资产</span>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-value" id="kpi-cases">—</span>
+          <span class="kpi-label">本库具体案例</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value" id="kpi-countries">27</span>
+          <span class="kpi-label">欧盟成员国覆盖</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value">477</span>
+          <span class="kpi-label">2024年欧盟机制通报</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-value">&lt;2%</span>
+          <span class="kpi-label">委员会出具意见比例</span>
+        </div>
+      </div>
+      <p class="hero-tagline">对华审查并非单一欧盟外资法，而是 <strong>安全/公共秩序</strong> 框架下的多层工具组合。</p>
+    </section>
+
+    <!-- 锚点导航 -->
+    <nav class="policy-toc-pills card" aria-label="章节导航">
+      <a href="#legal" class="policy-toc-pill active">法律依据</a>
+      <a href="#framework" class="policy-toc-pill">政策框架</a>
+      <a href="#trends" class="policy-toc-pill">2025+ 趋势</a>
+      <a href="#cases" class="policy-toc-pill">案例特点</a>
+      <a href="#experts" class="policy-toc-pill">专家洞见</a>
+      <a href="#sources" class="policy-toc-pill">参考来源</a>
+    </nav>
+
+    <!-- 1. 法律依据 -->
+    <section id="legal" class="policy-section card">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>法律依据</h2>
+      </div>
+      <p class="lead">合法性分散在欧盟条例、条约共享权能与 27 套国内审查法之中。</p>
+
+      <div class="legal-compare-wrap" id="legal-compare">
+        <button type="button" class="compare-toggle" id="compare-toggle">查看 2025 修订要点 →</button>
+        <div class="legal-compare">
+          <article class="legal-card compare-col" data-era="2019">
+            <div class="card-badge">现行</div>
+            <h4>Regulation (EU) 2019/452</h4>
+            <ul class="check-list">
+              <li>2020.10.11 合作机制适用</li>
+              <li>通报 · 协商 · 委员会意见</li>
+              <li>不取代成员国最终决定权</li>
+              <li>部分成员国长期无国内机制</li>
+            </ul>
+            <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0452" target="_blank" rel="noopener" class="mini-link">EUR-Lex ↗</a>
+          </article>
+          <article class="legal-card compare-col highlight" data-era="2025">
+            <div class="card-badge new">2025 协议</div>
+            <h4>修订条例（政治协议）</h4>
+            <ul class="check-list">
+              <li><strong>27 国强制</strong>建立国家审查机制</li>
+              <li>最低审查目录：芯片、AI、量子、关键基础设施等</li>
+              <li>封堵第三国通过欧盟壳公司投资</li>
+              <li>欧盟机关专用通报数据库</li>
+            </ul>
+            <a href="https://policy.trade.ec.europa.eu/news/revision-eus-foreign-investment-screening-mechanism-2025-12-11_en" target="_blank" rel="noopener" class="mini-link">欧盟贸易总司 ↗</a>
+          </article>
+        </div>
+      </div>
+
+      <div class="tool-grid">
+        <div class="tool-chip"><span class="tool-icon">§</span>TFEU 207 条 — 贸易权能</div>
+        <div class="tool-chip"><span class="tool-icon">§</span>安全 / 公共秩序例外</div>
+        <div class="tool-chip"><span class="tool-icon">§</span>EUMR 并购条例（并行）</div>
+        <div class="tool-chip"><span class="tool-icon">§</span>外国补贴条例 FSR</div>
+      </div>
+
+      <h3>成员国执法示例</h3>
+      <div class="table-wrap">
+        <table class="policy-table">
+          <thead>
+            <tr><th>国家</th><th>机制</th><th>代表案例</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr><td>🇩🇪 德国</td><td>AWV 外资审查</td><td>Elmos、ERS、COSCO</td><td><a href="country.html?c=DE">详情</a></td></tr>
+            <tr><td>🇮🇹 意大利</td><td>Golden Power</td><td>LPE、Pirelli、Manta</td><td><a href="country.html?c=IT">详情</a></td></tr>
+            <tr><td>🇳🇱 荷兰</td><td>Vifo 2023</td><td>Nexperia 系列</td><td><a href="country.html?c=NL">详情</a></td></tr>
+            <tr><td>🇸🇪 瑞典</td><td>FDI Act 2023</td><td>璞泰来 Putailai</td><td><a href="country.html?c=SE">详情</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 2. 政策框架 -->
+    <section id="framework" class="policy-section card">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>政策框架</h2>
+      </div>
+
+      <div class="flow-pipeline" aria-label="审查流程五步骤">
+        <div class="flow-step highlight" data-step="1">
+          <span class="flow-n">1</span>
+          <strong>申报/触发</strong>
+          <small>东道国国内法</small>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" data-step="2">
+          <span class="flow-n">2</span>
+          <strong>欧盟通报</strong>
+          <small>合作机制</small>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" data-step="3">
+          <span class="flow-n">3</span>
+          <strong>质询</strong>
+          <small>~10% 案件</small>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" data-step="4">
+          <span class="flow-n">4</span>
+          <strong>委员会意见</strong>
+          <small>&lt;2%</small>
+        </div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step" data-step="5">
+          <span class="flow-n">5</span>
+          <strong>成员国决定</strong>
+          <small>最终权力</small>
+        </div>
+      </div>
+
+      <div class="policy-tabs">
+        <button type="button" class="policy-tab active" data-tab="layers">三层架构</button>
+        <button type="button" class="policy-tab" data-tab="derisk">去风险工具箱</button>
+        <button type="button" class="policy-tab" data-tab="china">对华定位</button>
+      </div>
+
+      <div id="panel-layers" class="policy-tab-panel active">
+        <div class="layer-stack">
+          <div class="layer-card layer-3">
+            <h4>经济安全战略层</h4>
+            <p>去风险 · 关键原材料 · 半导体联盟 · 出站投资审查（提案）</p>
+          </div>
+          <div class="layer-card layer-2">
+            <h4>成员国审查层</h4>
+            <p>禁止 / 附条件 / 无异议 — 德国 AWV、意大利 Golden Power 等</p>
+          </div>
+          <div class="layer-card layer-1">
+            <h4>欧盟协调层</h4>
+            <p>2019/452 · 年度报告 · 委员会意见 · 成员国信息交换</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="panel-derisk" class="policy-tab-panel">
+        <div class="tool-grid large">
+          <div class="tool-card"><strong>FDI 审查</strong><span>本案核心</span></div>
+          <div class="tool-card"><strong>出口管制</strong><span>军民两用、芯片设备</span></div>
+          <div class="tool-card"><strong>外国补贴条例</strong><span>扭曲性补贴</span></div>
+          <div class="tool-card"><strong>研发安全</strong><span>敏感技术合作</span></div>
+          <div class="tool-card"><strong>5G 工具箱</strong><span>电信供应链</span></div>
+          <div class="tool-card"><strong>政府采购限制</strong><span>如罗马尼亚备忘录</span></div>
+        </div>
+      </div>
+
+      <div id="panel-china" class="policy-tab-panel">
+        <div class="callout callout-info">
+          <strong>要点：</strong>法律上不针对中国，但中国是通报来源国<strong>前列</strong>；公开否决高度集中于半导体、电网、港口、5G、核电。
+        </div>
+        <div class="progress-bars">
+          <div class="prog-row">
+            <label>半导体相关案例占比（本库）</label>
+            <div class="prog-track"><div class="prog-fill" style="width:42%"></div></div>
+            <span>~42%</span>
+          </div>
+          <div class="prog-row">
+            <label>明确禁止类结果</label>
+            <div class="prog-track"><div class="prog-fill warn" style="width:35%"></div></div>
+            <span>高</span>
+          </div>
+          <div class="prog-row">
+            <label>附条件/软性管控</label>
+            <div class="prog-track"><div class="prog-fill accent" style="width:28%"></div></div>
+            <span>上升</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 趋势 -->
+    <section id="trends" class="policy-section card">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>2025 年以来核心趋势</h2>
+      </div>
+
+      <div class="grid-2 chart-row">
+        <div class="chart-box">
+          <div class="chart-container policy-chart"><canvas id="chart-fdi-stats"></canvas></div>
+        </div>
+        <div class="takeaway-box">
+          <h3>五句话读懂 2025+</h3>
+          <ol class="takeaway-list">
+            <li><strong>制度化</strong> — 27 国强制审查 + 最低标准</li>
+            <li><strong>泛安全化</strong> — 芯片、AI、电网、电池材料</li>
+            <li><strong>事后监管</strong> — Nexperia 范式</li>
+            <li><strong>绿地增多</strong> — 审查从并购扩展到全周期</li>
+            <li><strong>隐性条件</strong> — 否决少、治理限制多</li>
+          </ol>
+        </div>
+      </div>
+
+      <h3>交互时间线</h3>
+      <div class="viz-timeline">
+        <div class="viz-timeline-track">
+          <button type="button" class="viz-timeline-item active" data-year="2025.10" data-title="第五份年度报告" data-body="2024年通报477起，中国为主要来源国之一；92%两周内结案，8%深入评估，委员会意见&lt;2%。">10月<br>年报</button>
+          <button type="button" class="viz-timeline-item" data-year="2025.12" data-title="修订条例政治协议" data-body="强制27国建立机制，统一最低审查范围，封堵壳公司漏洞。">12月<br>修法</button>
+          <button type="button" class="viz-timeline-item" data-year="2025" data-title="Nexperia 政府干预" data-body="荷兰对闻泰旗下 Nexperia 实施临时管控，审查延伸至事后治理与IP转移。">全年<br>Nexperia</button>
+          <button type="button" class="viz-timeline-item" data-year="2025" data-title="中资投资反弹" data-body="MERICS：对欧投资回升，绿地与电动车供应链为主，匈牙利、德、法承接大额项目。">全年<br>投资反弹</button>
+          <button type="button" class="viz-timeline-item" data-year="2025-26" data-title="内部分歧" data-body="部分成员国推动缩小强制审查清单，安全 vs 引资持续博弈。">26<br>博弈</button>
+        </div>
+        <div class="viz-timeline-detail card" id="timeline-detail"></div>
+      </div>
+    </section>
+
+    <!-- 4. 案例特点 -->
+    <section id="cases" class="policy-section card">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2>案例特点（本库数据驱动）</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="chart-box">
+          <div class="chart-container policy-chart"><canvas id="chart-policy-sector"></canvas></div>
+        </div>
+        <div class="chart-box">
+          <div class="chart-container policy-chart"><canvas id="chart-policy-outcome"></canvas></div>
+        </div>
+      </div>
+
+      <h3>执法风格矩阵</h3>
+      <div class="style-matrix">
+        <div class="matrix-cell matrix-hard">
+          <h4>硬否决型</h4>
+          <p>德 · 意 · 捷 · 瑞</p>
+          <small>公开禁止、技术转让否决</small>
+        </div>
+        <div class="matrix-cell matrix-cond">
+          <h4>条件管控型</h4>
+          <p>德 · 意 · 荷</p>
+          <small>股权上限、治理、董事会条件</small>
+        </div>
+        <div class="matrix-cell matrix-open">
+          <h4>吸引投资型</h4>
+          <p>匈</p>
+          <small>电池/汽车绿地，审查禁止率低</small>
+        </div>
+        <div class="matrix-cell matrix-quiet">
+          <h4>机制完善、个案少</h4>
+          <p>法 · 比 · 爱 等</p>
+          <small>工具齐全，公开否决稀缺</small>
+        </div>
+      </div>
+      <p class="cta-row">
+        <a class="btn-map" href="index.html">案例表与统计图</a>
+        <a class="btn-map btn-map-secondary" href="map.html">地图查看各国</a>
+      </p>
+    </section>
+
+    <!-- 5. 专家 -->
+    <section id="experts" class="policy-section card">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2>权威专家洞见</h2>
+      </div>
+      <p class="lead">点击展开完整引述与来源。观点不代表本库立场。</p>
+
+      <div class="expert-grid">
+        <div class="accordion-item open">
+          <button type="button" class="accordion-trigger" aria-expanded="true">
+            <span class="expert-org merics">MERICS</span>
+            <span class="expert-title">绿地 + 出站投资审查是应对中国的关键补丁</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <blockquote>将信息交换扩展到绿地投资，并纳入欧洲对外直接投资（ODI）审查。</blockquote>
+            <a href="https://merics.org/en/comment/new-eu-screening-framework-also-targeting-chinese-fdi-finally-place" target="_blank" rel="noopener">阅读原文 ↗</a>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false">
+            <span class="expert-org bruegel">Bruegel</span>
+            <span class="expert-title">Nexperia — 经济安全不能止于交易当日</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <blockquote>须对已进入供应链的企业实施持续治理监督，否则工具会落后于投资现实。</blockquote>
+            <a href="https://www.bruegel.org/newsletter/nexperia-crisis-wake-call-europes-approach-chinese-investment" target="_blank" rel="noopener">阅读原文 ↗</a>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false">
+            <span class="expert-org bruegel">Bruegel / MERICS</span>
+            <span class="expert-title">去风险同时以伙伴关系共存</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <blockquote>防御性工具须与合作伙伴战略并举，避免走向全面对抗。（García-Herrero、Oertel 等）</blockquote>
+            <a href="https://www.bruegel.org/policy-brief/updating-eu-strategy-china-co-existence-while-derisking-through-partnerships" target="_blank" rel="noopener">阅读原文 ↗</a>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false">
+            <span class="expert-org cer">CER</span>
+            <span class="expert-title">大门仍半开，但监管套利风险犹存</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <blockquote>成员国缺乏一致标准时，中国投资者将在监管差异中获益。</blockquote>
+            <a href="https://www.cer.eu/insights/europes-door-chinese-tech-investment-still-ajar" target="_blank" rel="noopener">阅读原文 ↗</a>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger" aria-expanded="false">
+            <span class="expert-org ec">欧盟委员会</span>
+            <span class="expert-title">2025 修订将强化集体应对能力</span>
+            <span class="accordion-icon">▼</span>
+          </button>
+          <div class="accordion-body">
+            <blockquote>使投资筛查更稳健、连贯且具有战略针对性。</blockquote>
+            <a href="https://policy.trade.ec.europa.eu/news/revision-eus-foreign-investment-screening-mechanism-2025-12-11_en" target="_blank" rel="noopener">阅读原文 ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. 来源 -->
+    <section id="sources" class="policy-section card">
+      <div class="section-head">
+        <span class="section-num">06</span>
+        <h2>参考来源</h2>
+      </div>
+      <div class="source-grid">
+        <a class="source-card" href="https://policy.trade.ec.europa.eu/enforcement-and-protection/investment-screening_en" target="_blank" rel="noopener">
+          <strong>欧盟委员会</strong><span>Investment Screening</span>
+        </a>
+        <a class="source-card" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0452" target="_blank" rel="noopener">
+          <strong>EUR-Lex</strong><span>Regulation 2019/452</span>
+        </a>
+        <a class="source-card" href="https://merics.org/en/report/chinese-investment-rises-7-year-high-chinese-fdi-europe-2025-update" target="_blank" rel="noopener">
+          <strong>MERICS</strong><span>Chinese FDI 2025 Update</span>
+        </a>
+        <a class="source-card" href="https://www.bruegel.org/policy-brief/updating-eu-strategy-china-co-existence-while-derisking-through-partnerships" target="_blank" rel="noopener">
+          <strong>Bruegel</strong><span>EU Strategy on China</span>
+        </a>
+      </div>
+      <div class="disclaimer">本页为研究性整理，不构成法律意见。图表数据部分来自本库案例聚合与欧盟 COM(2025)632 年度报告。</div>
+      <p class="note">最后更新：<strong id="policy-updated">—</strong></p>
+    </section>
+  </main>
+
+  <script type="module" src="js/policy.js"></script>
+</body>
+</html>
