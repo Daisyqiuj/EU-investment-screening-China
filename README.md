@@ -19,28 +19,27 @@
 
 ### 一次性设置
 
-1. 在 [GitHub](https://github.com/new) 新建仓库（建议英文名，如 `eu-china-fdi-screening`），**不要**勾选 “Add a README”（本地已有代码）。
-2. 在本项目目录执行（将 `YOUR_USER` 和 `YOUR_REPO` 换成你的用户名与仓库名）：
+1. 仓库地址：[github.com/Daisyqiuj/EU-investment-screening-China](https://github.com/Daisyqiuj/EU-investment-screening-China)
+
+2. 推送代码（若尚未推送）：
 
 ```powershell
 cd "d:\Users\qdaisy\Desktop\网站创建"
-git init
-git add .
-git commit -m "Initial commit: EU-China FDI screening case library"
-git branch -M main
-git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
+git remote set-url origin https://github.com/Daisyqiuj/EU-investment-screening-China.git
 git push -u origin main
 ```
 
-3. 打开仓库 **Settings → Pages**：
-   - **Source** 选 **GitHub Actions**（推荐，已包含 `.github/workflows/pages.yml`）
-   - 或选 **Deploy from a branch** → 分支 `main` → 文件夹 **`/ (root)`**
+3. 发布网站（**二选一**，新手建议用 A）：
 
-4. 等待 Actions 跑绿（约 1–2 分钟），访问：
+   **A. 不用 Actions（最简单）**  
+   **Settings → Pages** → Source 选 **Deploy from a branch** → 分支 `main`、文件夹 **`/ (root)`** → Save。等 1～3 分钟，访问下方网址即可。
 
-`https://YOUR_USER.github.io/YOUR_REPO/web/index.html`
+   **B. 用 Actions**  
+   **Settings → Pages** → Source 选 **GitHub Actions**。然后打开仓库顶部 **Actions** 标签 → 左侧点 **Deploy GitHub Pages** → 等出现绿色 ✅。若提示 **Review deployments**，需点 **Approve and deploy**。
 
-根目录 `index.html` 会自动跳转到 `web/index.html`。
+4. 访问：**https://daisyqiuj.github.io/EU-investment-screening-China/web/index.html**（根路径也会跳转到 `web/`）
+
+> 卡在 Actions？见详细图文说明：[docs/GITHUB_PAGES_指南.md](docs/GITHUB_PAGES_指南.md)
 
 ### 之后更新网站
 
