@@ -1944,6 +1944,101 @@ strong { color: var(--text); }
   background: #1A2634;
 }
 
+/* 分幕解说：左文右图 */
+.trend-stage {
+  display: grid;
+  grid-template-columns: minmax(260px, 36%) 1fr;
+  min-height: 300px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.trend-narrative {
+  background: #243447;
+  padding: 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.trend-scene-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.trend-scene-step {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.trend-scene-step strong {
+  color: var(--accent);
+  font-size: 1.05rem;
+}
+
+.trend-scene-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.trend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.trend-dot.active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+.trend-scene-title {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.trend-scene-bullets {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.trend-scene-bullets li {
+  margin-bottom: 0.45rem;
+}
+
+.trend-scene-bullets strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.trend-chart-area {
+  position: relative;
+  background: #1A2634;
+  min-height: 260px;
+}
+
+.trend-chart-area canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+}
+
 .trend-canvas-wrap canvas {
   display: block;
   width: 100%;
@@ -1996,12 +2091,30 @@ strong { color: var(--text); }
   background: rgba(79, 195, 247, 0.12);
 }
 
+@media (max-width: 720px) {
+  .trend-stage {
+    grid-template-columns: 1fr;
+  }
+  .trend-narrative {
+    padding: 1rem 1.1rem;
+  }
+  .trend-scene-title {
+    font-size: 1.05rem;
+  }
+  .trend-chart-area {
+    min-height: 220px;
+  }
+}
+
 @media (min-width: 1200px) {
-  .trend-canvas-wrap {
-    aspect-ratio: 2.4 / 1;
-    min-height: 280px;
+  .trend-stage {
+    min-height: 340px;
+  }
+  .trend-chart-area {
+    min-height: 320px;
   }
   .trend-hero-head h2 { font-size: 1.25rem; }
+  .trend-scene-title { font-size: 1.35rem; }
 }
 
 /* 大屏展示优化 */
