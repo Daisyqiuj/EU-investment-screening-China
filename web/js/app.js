@@ -19,7 +19,8 @@ async function init() {
   document.getElementById('last-updated').textContent =
     new Date(data.meta.last_updated).toLocaleString('zh-CN');
   document.getElementById('case-count').textContent = data.cases.length;
-  document.getElementById('disclaimer-text').textContent = data.meta.disclaimer;
+  const note = data.meta.completeness_note ? ` ${data.meta.completeness_note}` : '';
+  document.getElementById('disclaimer-text').textContent = data.meta.disclaimer + note;
 
   renderFrameworkUpdates(data);
   renderTable(data.cases);
