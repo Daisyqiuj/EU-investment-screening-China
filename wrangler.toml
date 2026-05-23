@@ -1,0 +1,7 @@
+# Cloudflare Pages 配置（可选；在 Dashboard 选「直接上传」或连接 GitHub 时参考）
+# Build command: （留空）
+# Build output directory: / （仓库根目录）
+
+# 若使用 wrangler pages deploy . 手动部署：
+name = "eu-investment-screening-china"
+pages_build_output_dir = "."

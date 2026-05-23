@@ -1,0 +1,25 @@
+# Netlify 静态站点（从 GitHub 导入仓库即可，无需构建）
+[build]
+  publish = "."
+  command = "echo no build"
+
+[[redirects]]
+  from = "/web/*"
+  to = "/web/:splat"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/web/audio/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"

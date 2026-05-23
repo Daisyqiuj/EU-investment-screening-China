@@ -1,0 +1,10 @@
+# 自定义域名（可选）
+# 若您已购买域名，将下面一行取消注释并改成您的域名，例如：
+# www.your-domain.com
+#
+# 然后在域名服务商 DNS 中添加：
+#   类型 CNAME，主机 www，值 → （见下方平台说明）
+#
+# GitHub Pages: daisyqiuj.github.io
+# Netlify:      在 Netlify 站点 Settings → Domain 中查看分配的 xxx.netlify.app，再按提示设 CNAME
+# Cloudflare:   在 Pages 项目 Custom domains 中按向导操作（可一键）
