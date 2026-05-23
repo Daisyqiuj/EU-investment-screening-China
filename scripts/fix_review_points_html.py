@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+from pathlib import Path
+
+HTML = """<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
@@ -19,11 +23,11 @@
   </header>
 
   <main class="container">
-    <div class="meta-bar">
+    <motion class="meta-bar">
       <span class="badge">新增审查点案例: <strong id="novel-case-count">—</strong></span>
       <span class="badge novel-stat-badge">审查点类型: <strong id="novel-point-types">—</strong></span>
       <span class="badge">最后更新: <strong id="last-updated">—</strong></span>
-    </div>
+    </motion>
 
     <section class="card novel-review-section novel-review-hero">
       <p class="novel-section-desc">
@@ -70,9 +74,16 @@
       </div>
     </section>
 
-    <div class="disclaimer" id="disclaimer-text"></div>
+    <motion class="disclaimer" id="disclaimer-text"></motion>
   </main>
 
   <script type="module" src="js/review-points-page.js?v=20260523"></script>
 </body>
 </html>
+"""
+
+HTML = HTML.replace("<motion ", "<div ").replace("</motion>", "</div>")
+
+out = Path(__file__).resolve().parent.parent / "web" / "review-points.html"
+out.write_text(HTML, encoding="utf-8")
+print(f"Wrote {out} ({len(HTML)} bytes)")
