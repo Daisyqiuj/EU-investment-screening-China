@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>欧盟及欧洲涉华企业投资审查案例库</title>
-  <link rel="stylesheet" href="css/styles.css?v=20260524" />
+  <link rel="stylesheet" href="css/styles.css?v=20260525" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
@@ -21,6 +21,29 @@
   </header>
 
   <main class="container">
+    <section class="trend-hero card" id="trend-hero">
+      <div class="trend-hero-head">
+        <div>
+          <h2>欧盟涉华投资审查 · 趋势演示</h2>
+          <p class="trend-hero-desc">纯数据驱动动画 · 约 50 秒循环 · 悬停暂停</p>
+        </div>
+        <div class="trend-hero-controls">
+          <span class="trend-year-badge">年份 <strong id="trend-year">2019</strong></span>
+          <button type="button" class="trend-btn" id="trend-replay" title="重新播放">↻ 重播</button>
+          <button type="button" class="trend-btn trend-btn-ghost" id="trend-skip" title="收起演示">跳过</button>
+        </div>
+      </div>
+      <div class="trend-canvas-wrap" id="trend-canvas-wrap">
+        <canvas id="trend-canvas" aria-label="欧盟涉华 FDI 审查趋势动画"></canvas>
+        <div class="trend-caption" id="trend-caption"></div>
+      </div>
+      <div class="trend-progress-track"><div id="trend-progress-fill"></div></div>
+    </section>
+
+    <p class="trend-collapsed-bar hidden" id="trend-collapsed-bar">
+      <button type="button" class="trend-btn" id="trend-expand">▶ 展开趋势演示动画</button>
+    </p>
+
     <div class="meta-bar">
       <span class="badge">案例数: <strong id="case-count">—</strong></span>
       <span class="badge">最后更新: <strong id="last-updated">—</strong></span>
@@ -120,6 +143,6 @@
     <div class="disclaimer" id="disclaimer-text"></div>
   </main>
 
-  <script type="module" src="js/app.js?v=20260523"></script>
+  <script type="module" src="js/app.js?v=20260525"></script>
 </body>
 </html>

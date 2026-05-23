@@ -1858,6 +1858,152 @@ strong { color: var(--text); }
 
 .contrib-intro { border-left: 4px solid var(--accent); }
 
+/* —— 首页趋势演示动画 —— */
+.trend-hero {
+  margin-bottom: 1.5rem;
+  border-top-color: var(--accent);
+  overflow: hidden;
+}
+
+.trend-hero.collapsed {
+  display: none;
+}
+
+.trend-hero-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.trend-hero-head h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+  color: var(--text);
+}
+
+.trend-hero-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.trend-hero-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trend-year-badge {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface2);
+}
+
+.trend-year-badge strong {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin-left: 0.25rem;
+}
+
+.trend-btn {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-family: inherit;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+
+.trend-btn:hover {
+  background: rgba(79, 195, 247, 0.15);
+}
+
+.trend-btn-ghost {
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+.trend-canvas-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  min-height: 200px;
+  max-height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #1A2634;
+}
+
+.trend-canvas-wrap canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.trend-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(transparent, rgba(26, 38, 52, 0.92));
+  pointer-events: none;
+}
+
+.trend-caption strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.trend-caption span {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.trend-progress-track {
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  margin-top: 0.75rem;
+  overflow: hidden;
+}
+
+#trend-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--coral));
+  transition: width 0.15s linear;
+}
+
+.trend-collapsed-bar {
+  margin: 0 0 1.25rem;
+  text-align: center;
+}
+
+.trend-collapsed-bar .trend-btn {
+  background: rgba(79, 195, 247, 0.12);
+}
+
+@media (min-width: 1200px) {
+  .trend-canvas-wrap {
+    aspect-ratio: 2.4 / 1;
+    min-height: 280px;
+  }
+  .trend-hero-head h2 { font-size: 1.25rem; }
+}
+
 /* 大屏展示优化 */
 @media (min-width: 1200px) {
   .container { max-width: 1400px; }

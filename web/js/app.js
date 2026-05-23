@@ -1,6 +1,7 @@
 import { loadCases, countByCountry, countByOutcome } from './data.js';
 import { CHART_THEME, chartOptions } from './chart-theme.js';
 import { initPodcast } from './podcast.js';
+import { initTrendAnimation } from './trend-animation.js';
 
 const OUTCOME_COLORS = {
   '禁止': '#FF7043',
@@ -27,6 +28,7 @@ async function init() {
   setupFilters(data.cases);
   renderCharts(data);
   initPodcast();
+  initTrendAnimation().catch((e) => console.warn('趋势动画:', e));
 }
 
 function renderFrameworkUpdates(data) {
