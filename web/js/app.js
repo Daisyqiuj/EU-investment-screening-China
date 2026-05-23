@@ -1,7 +1,7 @@
 import { loadCases, countByCountry, countByOutcome } from './data.js';
 import { CHART_THEME, chartOptions } from './chart-theme.js';
 import { initPodcast } from './podcast.js';
-import { initTrendAnimation } from './trend-animation.js';
+import { initTrendAnimation } from './trend-animation.js?v=20260527';
 
 const OUTCOME_COLORS = {
   '禁止': '#FF7043',
