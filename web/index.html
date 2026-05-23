@@ -50,6 +50,12 @@
       <p id="podcast-empty" class="empty-state">播客尚未生成，请运行 <code>py -3 scripts/generate_podcast.py</code> 或等待每周一自动更新。</p>
     </section>
 
+    <section class="card novel-review-section" style="margin-bottom:1.5rem">
+      <h2>🆕 新增审查点提醒</h2>
+      <p class="novel-section-desc">按案例<strong>决定日期</strong>排序：若某审查关注点在欧洲公开案例中<strong>首次出现</strong>，无论最终批准或禁止，均在此提醒读者。</p>
+      <div id="novel-review-feed" class="novel-review-feed">加载中…</div>
+    </section>
+
     <section class="grid-2">
       <div class="card">
         <h2>各国/地区案例数量</h2>
@@ -99,6 +105,7 @@
               <th>行业</th>
               <th>决定日期</th>
               <th>结果</th>
+              <th>新增审查点</th>
               <th>摘要</th>
             </tr>
           </thead>

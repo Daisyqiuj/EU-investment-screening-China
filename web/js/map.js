@@ -7,6 +7,12 @@ import {
   ENFORCEMENT_STYLES,
 } from './data.js';
 import { showCountryIdiomBanner, hideCountryIdiomBanner } from './country-idioms.js';
+import {
+  loadReviewPointsCatalog,
+  buildNoveltyIndex,
+  getNoveltyForCase,
+  renderNovelAlertBox,
+} from './review-points.js';
 
 const GEOJSON_URL = 'data/europe.geojson';
 const EUROPE_BOUNDS = [[33, -25], [72, 45]];
@@ -24,6 +30,7 @@ let geoLayer;
 let selectedIso = null;
 let casesData = null;
 let styleByCountry = {};
+let noveltyIndex = null;
 const layerByIso = new Map();
 
 function styleFeature(iso) {
@@ -127,6 +134,7 @@ function selectCountry(code, data) {
 }
 
 function renderCaseCard(c) {
+  const novel = noveltyIndex ? getNoveltyForCase(c.id, noveltyIndex) : [];
   const timeline = (c.timeline || [])
     .map((t) => `<li><span class="date">${escapeHtml(t.date)}</span>${escapeHtml(t.event)}</li>`)
     .join('');
@@ -136,6 +144,7 @@ function renderCaseCard(c) {
 
   return `
     <div class="case-card">
+      ${renderNovelAlertBox(novel, c.target_company)}
       <h3>${escapeHtml(c.target_company)}</h3>
       <div class="meta-row">
         <span>投资者: ${escapeHtml(c.investor)}</span>
@@ -222,6 +231,8 @@ async function initMap(counts) {
 async function init() {
   casesData = await loadCases();
   styleByCountry = buildEnforcementStyleMap(casesData);
+  const catalog = await loadReviewPointsCatalog();
+  noveltyIndex = buildNoveltyIndex(casesData.cases, catalog).index;
   const counts = countByCountry(casesData);
   document.getElementById('last-updated').textContent =
     new Date(casesData.meta.last_updated).toLocaleString('zh-CN');

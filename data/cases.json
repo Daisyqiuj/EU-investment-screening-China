@@ -167,7 +167,10 @@
         "汽车",
         "禁止交易"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_semiconductor_fab"
+      ]
     },
     {
       "id": "DE-2022-SEMICON2",
@@ -208,7 +211,10 @@
         "保密",
         "禁止交易"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_semiconductor_fab"
+      ]
     },
     {
       "id": "DE-2022-COSCO",
@@ -249,7 +255,10 @@
         "基础设施",
         "股权限制"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_port_terminal"
+      ]
     },
     {
       "id": "IT-2023-PIRELLI",
@@ -298,7 +307,11 @@
         "治理限制",
         "关键技术"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_tire_connected_data",
+        "rp_governance_shareholder"
+      ]
     },
     {
       "id": "UK-2022-MANCHESTER",
@@ -340,7 +353,10 @@
         "半导体",
         "禁止交易"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_university_ip"
+      ]
     },
     {
       "id": "UK-2022-PULSIC",
@@ -382,7 +398,10 @@
         "半导体",
         "禁止交易"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_eda_chip_design"
+      ]
     },
     {
       "id": "UK-2022-SEMICON3",
@@ -423,7 +442,11 @@
         "半导体",
         "保密"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_semiconductor_fab",
+        "rp_dual_use_military"
+      ]
     },
     {
       "id": "LT-2021-RAILBRIDGE",
@@ -464,7 +487,10 @@
         "公共采购",
         "中国国企"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_rail_crossborder_infra"
+      ]
     },
     {
       "id": "DE-2016-KUKA",
@@ -513,7 +539,10 @@
         "历史批准",
         "政策转折点"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_robotics_automation"
+      ]
     },
     {
       "id": "EU-2024-STATS",
@@ -607,7 +636,11 @@
         "核电",
         "撤回要约"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_aerospace_metal_forming",
+        "rp_dual_use_military"
+      ]
     },
     {
       "id": "DE-2018-50HERTZ",
@@ -652,7 +685,10 @@
         "关键基础设施",
         "国家电网"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_power_grid"
+      ]
     },
     {
       "id": "DE-2022-ERS",
@@ -696,7 +732,10 @@
         "半导体设备",
         "禁止交易"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_semiconductor_equipment"
+      ]
     },
     {
       "id": "DE-2022-HEYER",
@@ -753,7 +792,11 @@
         "程序争议",
         "最终批准"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_medical_critical_care",
+        "rp_distressed_mna"
+      ]
     },
     {
       "id": "IT-2021-LPE",
@@ -802,7 +845,10 @@
         "黄金权力",
         "否决"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_semiconductor_equipment"
+      ]
     },
     {
       "id": "IT-2022-ROBOX",
@@ -847,7 +893,11 @@
         "技术转让",
         "部分禁止"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_robotics_automation",
+        "rp_ip_licensing_joint"
+      ]
     },
     {
       "id": "IT-2020-FASTWEB-HUAWEI",
@@ -892,7 +942,10 @@
         "华为",
         "电信"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_telecom_5g_core"
+      ]
     },
     {
       "id": "IT-2018-ESAOTE",
@@ -940,7 +993,10 @@
         "医疗器械",
         "附条件批准"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_medical_imaging"
+      ]
     },
     {
       "id": "IT-2024-MANTA",
@@ -985,7 +1041,11 @@
         "合资",
         "2024唯一否决"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_civil_aircraft_evtol",
+        "rp_ip_licensing_joint"
+      ]
     },
     {
       "id": "NL-2022-NOWI",
@@ -1038,7 +1098,10 @@
         "审查后批准",
         "闻泰科技"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_rf_semiconductor"
+      ]
     },
     {
       "id": "NL-2025-NEXPERIA",
@@ -1092,7 +1155,12 @@
         "闻泰科技",
         "进行中"
       ],
-      "status": "ongoing"
+      "status": "ongoing",
+      "review_points": [
+        "rp_semiconductor_fab",
+        "rp_supply_chain_special_act",
+        "rp_forced_divestment"
+      ]
     },
     {
       "id": "CZ-2025-EMPOSAT",
@@ -1137,7 +1205,11 @@
         "首次禁止",
         "国家安全"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_satellite_ground_station",
+        "rp_greenfield_fdi"
+      ]
     },
     {
       "id": "SE-2024-PUTAILAI",
@@ -1190,7 +1262,11 @@
         "绿地投资",
         "首例禁止"
       ],
-      "status": "ongoing"
+      "status": "ongoing",
+      "review_points": [
+        "rp_battery_greenfield",
+        "rp_greenfield_fdi"
+      ]
     },
     {
       "id": "AT-2025-JDCOM",
@@ -1239,7 +1315,11 @@
         "京东",
         "审查中"
       ],
-      "status": "ongoing"
+      "status": "ongoing",
+      "review_points": [
+        "rp_consumer_retail_chain",
+        "rp_retail_consumer_data"
+      ]
     },
     {
       "id": "PT-2018-EDP-CTG",
@@ -1292,7 +1372,10 @@
         "公用事业",
         "全面要约失败"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_utility_full_takeover"
+      ]
     },
     {
       "id": "RO-2020-CGN",
@@ -1337,7 +1420,10 @@
         "基础设施",
         "战略合作终止"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_nuclear_power"
+      ]
     },
     {
       "id": "RO-2021-INFRA-MEMO",
@@ -1378,7 +1464,10 @@
         "基础设施",
         "政策限制"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_public_procurement_exclusion"
+      ]
     },
     {
       "id": "ES-2016-ARITEX",
@@ -1419,7 +1508,10 @@
         "历史批准",
         "军民两用"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_automotive_oem_supply"
+      ]
     },
     {
       "id": "PL-REGIME-NO-VETO",
@@ -2073,7 +2165,11 @@
         "国有防务",
         "禁止交易"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_radar_satcom_5g",
+        "rp_dual_use_military"
+      ]
     },
     {
       "id": "DE-2023-KLEO",
@@ -2122,7 +2218,11 @@
         "低轨通信",
         "已持多数仍禁止"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_satellite_leo_network",
+        "rp_majority_stake_increase"
+      ]
     },
     {
       "id": "DE-2024-MAN",
@@ -2171,7 +2271,11 @@
         "军民两用",
         "能源装备"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_gas_turbine_dual_use",
+        "rp_dual_use_military"
+      ]
     },
     {
       "id": "DE-2023-VISIBLE",
@@ -2212,7 +2316,10 @@
         "批准",
         "对照案例"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_b2b_digital_platform"
+      ]
     },
     {
       "id": "DE-2024-CORNING-LASER",
@@ -2253,7 +2360,11 @@
         "半导体设备",
         "交易终止"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_laser_precision",
+        "rp_semiconductor_equipment"
+      ]
     },
     {
       "id": "FR-2025-JDCOM-FNAC",
@@ -2299,7 +2410,12 @@
         "附条件",
         "IEF"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_indirect_retail_stake",
+        "rp_cultural_media_retail",
+        "rp_retail_consumer_data"
+      ]
     },
     {
       "id": "IT-2021-VERISEM",
@@ -2344,7 +2460,10 @@
         "种子",
         "Golden Power"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_agri_seeds"
+      ]
     },
     {
       "id": "BE-2023-AAC-PSS",
@@ -2385,7 +2504,10 @@
         "声学",
         "批准"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_automotive_acoustics"
+      ]
     },
     {
       "id": "UK-2022-NWF",
@@ -2430,7 +2552,11 @@
         "强制剥离",
         "NSIA"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_compound_semiconductor",
+        "rp_forced_divestment"
+      ]
     },
     {
       "id": "UK-2024-FTDI",
@@ -2471,7 +2597,11 @@
         "USB芯片",
         "强制剥离"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_usb_interface_chip",
+        "rp_forced_divestment"
+      ]
     },
     {
       "id": "UK-2022-HILIGHT",
@@ -2512,7 +2642,10 @@
         "半导体",
         "禁止"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_optoelectronics"
+      ]
     },
     {
       "id": "UK-2022-GARDNER",
@@ -2553,7 +2686,11 @@
         "附条件",
         "NSIA"
       ],
-      "status": "closed"
+      "status": "closed",
+      "review_points": [
+        "rp_aerospace_metal_forming",
+        "rp_governance_shareholder"
+      ]
     }
   ]
 }

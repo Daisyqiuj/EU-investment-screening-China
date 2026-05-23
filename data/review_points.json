@@ -1,0 +1,178 @@
+{
+  "version": "1.0.0",
+  "description": "欧盟涉华 FDI 审查关注点分类；用于检测案例中首次出现的审查维度",
+  "points": {
+    "rp_robotics_automation": {
+      "label": "工业机器人 / 自动化",
+      "desc": "审查关注智能制造、工业自动化与工厂控制权"
+    },
+    "rp_aerospace_metal_forming": {
+      "label": "航空航天金属成形",
+      "desc": "民用航空零部件制造与高端金属加工能力"
+    },
+    "rp_dual_use_military": {
+      "label": "军民两用 / 防务关联",
+      "desc": "技术可用于国防或受出口管制约束"
+    },
+    "rp_power_grid": {
+      "label": "电网 / 输电基础设施",
+      "desc": "电力传输网络与能源系统安全"
+    },
+    "rp_automotive_oem_supply": {
+      "label": "汽车 OEM 供应链",
+      "desc": "整车厂或 Tier1 级供应链整合"
+    },
+    "rp_medical_imaging": {
+      "label": "医疗影像设备",
+      "desc": "超声、影像等诊断设备与数据"
+    },
+    "rp_telecom_5g_core": {
+      "label": "5G / 电信核心网",
+      "desc": "核心网设备、供应商替换与网络主权"
+    },
+    "rp_semiconductor_fab": {
+      "label": "半导体制造",
+      "desc": "晶圆、封装与汽车/工业芯片生产"
+    },
+    "rp_semiconductor_equipment": {
+      "label": "半导体设备",
+      "desc": "刻蚀、测试、专用半导体生产设备"
+    },
+    "rp_eda_chip_design": {
+      "label": "EDA / 芯片设计",
+      "desc": "电子设计自动化与芯片 IP"
+    },
+    "rp_compound_semiconductor": {
+      "label": "化合物半导体",
+      "desc": "碳化硅、氮化镓等宽禁带半导体能力"
+    },
+    "rp_university_ip": {
+      "label": "高校 / 科研机构 IP",
+      "desc": "大学衍生技术、视觉传感等 IP 转移"
+    },
+    "rp_rail_crossborder_infra": {
+      "label": "跨境铁路基建承包商",
+      "desc": "欧盟跨境铁路项目与关键桥梁工程"
+    },
+    "rp_governance_shareholder": {
+      "label": "股东治理权 / 董事会",
+      "desc": "Golden Power 或 IEF 对治理权、信息权的限制"
+    },
+    "rp_tire_connected_data": {
+      "label": "轮胎 / 车联网数据",
+      "desc": "智能轮胎、传感器与车辆数据安全"
+    },
+    "rp_port_terminal": {
+      "label": "港口 / 码头运营权",
+      "desc": "集装箱码头股权与物流枢纽控制"
+    },
+    "rp_ip_licensing_joint": {
+      "label": "技术许可 / 合资合作",
+      "desc": "增资+许可、JV 等技术合作结构"
+    },
+    "rp_medical_critical_care": {
+      "label": "关键医疗器械（重症）",
+      "desc": "呼吸机、麻醉机等公共卫生相关设备"
+    },
+    "rp_distressed_mna": {
+      "label": "破产 / 困境资产收购",
+      "desc": "在破产程序中收购敏感资产"
+    },
+    "rp_agri_seeds": {
+      "label": "农业 / 战略种子",
+      "desc": "蔬菜、香草种子与农业生物技术控制权"
+    },
+    "rp_radar_satcom_5g": {
+      "label": "雷达 / 卫星通信 / 5G 毫米波",
+      "desc": "综合通信、雷达与下一代移动网络技术"
+    },
+    "rp_nuclear_power": {
+      "label": "核电 / 核设施扩建",
+      "desc": "核电站建设与核燃料供应链"
+    },
+    "rp_public_procurement_exclusion": {
+      "label": "公共采购排除",
+      "desc": "以政策备忘录排除特定来源企业参与大型招标"
+    },
+    "rp_rf_semiconductor": {
+      "label": "射频半导体",
+      "desc": "RF 芯片、雷达前端等通信半导体"
+    },
+    "rp_supply_chain_special_act": {
+      "label": "特别供给法 / 非典型干预",
+      "desc": "动用《商品供应法》等非常规工具干预运营"
+    },
+    "rp_forced_divestment": {
+      "label": "强制剥离 / 事后命令",
+      "desc": "收购完成后要求出售股权或资产"
+    },
+    "rp_satellite_ground_station": {
+      "label": "卫星地面站",
+      "desc": "卫星测控、地面站与空间基础设施"
+    },
+    "rp_battery_greenfield": {
+      "label": "电池材料绿地投资",
+      "desc": "新建负极/正极等电池材料产能"
+    },
+    "rp_greenfield_fdi": {
+      "label": "绿地 FDI 审查",
+      "desc": "新建工厂、产能而非并购现有企业"
+    },
+    "rp_consumer_retail_chain": {
+      "label": "消费电子零售连锁",
+      "desc": "MediaMarkt 类全国零售网络"
+    },
+    "rp_retail_consumer_data": {
+      "label": "零售消费者数据",
+      "desc": "会员、支付与消费行为数据安全"
+    },
+    "rp_utility_full_takeover": {
+      "label": "战略公用事业全面收购",
+      "desc": "电力等公用事业控股要约与投票权安排"
+    },
+    "rp_satellite_leo_network": {
+      "label": "低轨卫星通信网络",
+      "desc": "LEO 星座、星链类全球通信服务"
+    },
+    "rp_majority_stake_increase": {
+      "label": "已持多数后再增持",
+      "desc": "对已有控股权的进一步收购仍触发审查"
+    },
+    "rp_gas_turbine_dual_use": {
+      "label": "燃气轮机 / 能源装备",
+      "desc": "燃气轮机业务与军民两用能源技术"
+    },
+    "rp_b2b_digital_platform": {
+      "label": "B2B 数字平台",
+      "desc": "企业间电商与跨境数字平台"
+    },
+    "rp_laser_precision": {
+      "label": "激光精密加工",
+      "desc": "激光微加工设备与苹果供应链关联"
+    },
+    "rp_indirect_retail_stake": {
+      "label": "间接零售股权路径",
+      "desc": "通过母公司/要约间接进入下游零售商"
+    },
+    "rp_cultural_media_retail": {
+      "label": "文化 / 媒体零售",
+      "desc": "Fnac Darty 类图书、文化产品与连锁零售"
+    },
+    "rp_automotive_acoustics": {
+      "label": "汽车声学电子",
+      "desc": "车载音响、声学模组供应链"
+    },
+    "rp_optoelectronics": {
+      "label": "光电子 / 光学半导体",
+      "desc": "光学芯片、光通信与传感技术"
+    },
+    "rp_usb_interface_chip": {
+      "label": "USB 接口芯片",
+      "desc": "通用接口类半导体 IP 与供应链"
+    },
+    "rp_civil_aircraft_evtol": {
+      "label": "民用航空器 / eVTOL",
+      "desc": "新型民用航空器与电动垂直起降项目"
+    }
+  }
+}

@@ -489,6 +489,13 @@ def main() -> None:
     print(f"Added {added} new cases. Total cases: {len(db['cases'])}")
     print(f"Concrete deals: {len(concrete)}")
 
+    try:
+        import tag_review_points
+
+        tag_review_points.main()
+    except Exception as e:
+        print(f"[WARN] review_points tagging skipped: {e}", file=sys.stderr)
+
 
 if __name__ == "__main__":
     main()
