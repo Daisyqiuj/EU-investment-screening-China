@@ -107,19 +107,28 @@ function setupFilters(cases) {
     const outcome = document.getElementById('filter-outcome').value;
     const sector = sectorSel.value;
     const q = document.getElementById('filter-search').value.toLowerCase();
+    const novelOnly = document.getElementById('filter-novel-only')?.checked;
     document.querySelectorAll('#cases-tbody tr').forEach((tr) => {
       const text = tr.textContent.toLowerCase();
       const show =
         (!country || tr.dataset.country === country) &&
         (!outcome || tr.dataset.outcome === outcome) &&
         (!sector || tr.dataset.sector === sector) &&
+        (!novelOnly || tr.dataset.hasNovel === '1') &&
         (!q || text.includes(q));
       tr.style.display = show ? '' : 'none';
     });
   };
 
-  [countrySel, document.getElementById('filter-outcome'), sectorSel, document.getElementById('filter-search')]
-    .forEach((el) => el.addEventListener('input', apply));
+  const filterEls = [
+    countrySel,
+    document.getElementById('filter-outcome'),
+    sectorSel,
+    document.getElementById('filter-search'),
+    document.getElementById('filter-novel-only'),
+  ];
+  filterEls.forEach((el) => el?.addEventListener('input', apply));
+  filterEls.forEach((el) => el?.addEventListener('change', apply));
   apply();
 }
 

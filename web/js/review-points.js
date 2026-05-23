@@ -126,9 +126,15 @@ export function renderNoveltyFeed(timeline, limit = 15) {
 
 export async function initNoveltyAlerts(cases) {
   const catalog = await loadReviewPointsCatalog();
-  const { index, timeline } = buildNoveltyIndex(cases, catalog);
+  const { index, timeline, seenCount } = buildNoveltyIndex(cases, catalog);
   renderNoveltyFeed(timeline);
-  return { catalog, index, timeline };
+
+  const caseCountEl = document.getElementById('novel-case-count');
+  const typesEl = document.getElementById('novel-point-types');
+  if (caseCountEl) caseCountEl.textContent = String(timeline.length);
+  if (typesEl) typesEl.textContent = String(seenCount);
+
+  return { catalog, index, timeline, seenCount };
 }
 
 export function getNoveltyForCase(caseId, index) {

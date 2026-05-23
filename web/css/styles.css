@@ -489,6 +489,55 @@ tr:hover td { background: rgba(142, 210, 186, 0.28); }
   background: linear-gradient(135deg, var(--cream) 0%, #fff5f6 100%);
 }
 
+.novel-review-hero {
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.novel-review-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.novel-review-header h2 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.novel-stat-badge {
+  background: var(--coral-light);
+  border: 1px solid var(--coral);
+}
+
+.novel-section-foot {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.filter-novel-only {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--coral-dark);
+  font-weight: 600;
+  margin-right: 0.75rem;
+  white-space: nowrap;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 .novel-section-desc {
   font-size: 0.9rem;
   color: var(--muted);
