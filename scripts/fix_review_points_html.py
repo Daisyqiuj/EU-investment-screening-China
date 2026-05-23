@@ -19,7 +19,7 @@ HTML = """<!DOCTYPE html>
       <a href="map.html">🗺 地图入口</a>
       <a href="review-points.html" class="active">🆕 新增审查风险提醒</a>
       <a href="policy.html">审查规则背景</a>
-      <a href="contribute.html">✉️ 我要贡献案例</a>
+      <a href="contribute.html" class="nav-contribute">✉️ 我要贡献案例</a>
     </nav>
   </header>
 
