@@ -10,10 +10,11 @@
 <body>
   <header class="site-header">
     <h1>欧盟及欧洲范围 · 涉中国企业投资审查案例库</h1>
-    <p class="subtitle">EU &amp; Europe FDI Screening — 案例总览 · 新增审查点提醒 · 地图与播客</p>
+    <p class="subtitle">EU &amp; Europe FDI Screening Cases Involving Chinese Investors — 表格、图表与互动地图</p>
     <nav class="nav-bar">
       <a href="index.html" class="active">案例总览</a>
       <a href="map.html">🗺 欧洲互动地图</a>
+      <a href="review-points.html">🆕 审查点提醒</a>
       <a href="policy.html">政策与法律框架</a>
     </nav>
   </header>
@@ -23,20 +24,14 @@
       <span class="badge">案例数: <strong id="case-count">—</strong></span>
       <span class="badge">最后更新: <strong id="last-updated">—</strong></span>
       <span class="badge">自动更新: 每周一 09:00</span>
-      <span class="badge novel-stat-badge">新增审查点案例: <strong id="novel-case-count">—</strong></span>
     </div>
 
-    <section class="card novel-review-section novel-review-hero" id="novel-review-section">
-      <div class="novel-review-header">
-        <h2>🆕 新增审查点提醒</h2>
-        <span class="badge">已追踪 <strong id="novel-point-types">—</strong> 类审查关注点</span>
-      </div>
-      <p class="novel-section-desc">
-        按案例<strong>决定日期</strong>从早到晚排序：若某<strong>审查关注点</strong>在欧洲公开案例中<strong>首次出现</strong>，
-        无论该案例最终<strong>批准或禁止</strong>，均在此高亮提醒读者。
+    <section class="card review-points-promo" style="margin-bottom:1.5rem">
+      <h2>🆕 新增审查点提醒</h2>
+      <p style="color:var(--muted);margin-bottom:1rem;font-size:0.95rem">
+        单独页面追踪各案例中<strong>历史上首次出现</strong>的审查关注点（与批准/禁止无关）。
       </p>
-      <div id="novel-review-feed" class="novel-review-feed">加载中…</div>
-      <p class="novel-section-foot"><a href="#cases-table">↓ 在下方案例表中查看「新增审查点」列</a></p>
+      <a class="btn-map" href="review-points.html">进入审查点提醒专页 →</a>
     </section>
 
     <p>
@@ -85,13 +80,9 @@
       <ul class="framework-list" id="framework-updates"></ul>
     </div>
 
-    <div class="card" id="cases-table">
+    <div class="card">
       <h2>案例资料表</h2>
       <div class="filters">
-        <label class="filter-novel-only">
-          <input type="checkbox" id="filter-novel-only" />
-          仅显示含新增审查点的案例
-        </label>
         <select id="filter-country"><option value="">全部国家</option></select>
         <select id="filter-outcome">
           <option value="">全部结果</option>
@@ -117,7 +108,6 @@
               <th>行业</th>
               <th>决定日期</th>
               <th>结果</th>
-              <th>新增审查点</th>
               <th>摘要</th>
             </tr>
           </thead>

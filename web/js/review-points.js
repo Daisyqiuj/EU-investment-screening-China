@@ -58,6 +58,18 @@ export function buildNoveltyIndex(cases, catalog) {
   return { index, timeline, seenCount: seen.size };
 }
 
+/** 每种审查点首次出现的案例 */
+export function buildFirstAppearance(cases, catalog) {
+  const { index, timeline } = buildNoveltyIndex(cases, catalog);
+  const first = new Map();
+  for (const { case: c, novel } of timeline) {
+    for (const p of novel) {
+      if (!first.has(p.id)) first.set(p.id, { point: p, case: c });
+    }
+  }
+  return first;
+}
+
 export function renderNovelBadges(novelPoints) {
   if (!novelPoints?.length) return '';
   return novelPoints

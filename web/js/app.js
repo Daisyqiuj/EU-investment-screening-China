@@ -1,11 +1,6 @@
 import { loadCases, countByCountry, countByOutcome } from './data.js';
 import { CHART_THEME, chartOptions } from './chart-theme.js';
 import { initPodcast } from './podcast.js';
-import {
-  initNoveltyAlerts,
-  getNoveltyForCase,
-  renderNovelBadges,
-} from './review-points.js';
 
 const OUTCOME_COLORS = {
   '禁止': '#FF8C94',
@@ -27,10 +22,8 @@ async function init() {
   const note = data.meta.completeness_note ? ` ${data.meta.completeness_note}` : '';
   document.getElementById('disclaimer-text').textContent = data.meta.disclaimer + note;
 
-  const novelty = await initNoveltyAlerts(data.cases);
-
   renderFrameworkUpdates(data);
-  renderTable(data.cases, novelty.index);
+  renderTable(data.cases);
   setupFilters(data.cases);
   renderCharts(data);
   initPodcast();
@@ -55,27 +48,21 @@ function renderFrameworkUpdates(data) {
   }
 }
 
-function renderTable(cases, noveltyIndex) {
+function renderTable(cases) {
   const tbody = document.getElementById('cases-tbody');
   tbody.innerHTML = '';
   for (const c of cases) {
-    const novel = noveltyIndex ? getNoveltyForCase(c.id, noveltyIndex) : [];
-    const novelCell = novel.length
-      ? renderNovelBadges(novel)
-      : '<span class="muted-text">—</span>';
     const tr = document.createElement('tr');
     tr.dataset.country = c.country;
     tr.dataset.outcome = c.outcome;
     tr.dataset.sector = c.target_sector;
-    tr.dataset.hasNovel = novel.length ? '1' : '0';
     tr.innerHTML = `
-      <td><a href="country.html?c=${c.country}#${escapeAttr(c.id)}">${escapeHtml(c.country_name)}</a></td>
+      <td><a href="country.html?c=${c.country}">${escapeHtml(c.country_name)}</a></td>
       <td>${escapeHtml(c.target_company)}</td>
       <td>${escapeHtml(c.investor)}</td>
       <td>${escapeHtml(c.target_sector)}</td>
       <td>${escapeHtml(c.decision_date || '—')}</td>
       <td><span class="outcome outcome-${c.outcome}">${escapeHtml(c.outcome)}</span></td>
-      <td class="novel-cell">${novelCell}</td>
       <td title="${escapeAttr(c.summary_zh)}">${escapeHtml(c.summary_zh.slice(0, 60))}…</td>
     `;
     tbody.appendChild(tr);
@@ -107,28 +94,19 @@ function setupFilters(cases) {
     const outcome = document.getElementById('filter-outcome').value;
     const sector = sectorSel.value;
     const q = document.getElementById('filter-search').value.toLowerCase();
-    const novelOnly = document.getElementById('filter-novel-only')?.checked;
     document.querySelectorAll('#cases-tbody tr').forEach((tr) => {
       const text = tr.textContent.toLowerCase();
       const show =
         (!country || tr.dataset.country === country) &&
         (!outcome || tr.dataset.outcome === outcome) &&
         (!sector || tr.dataset.sector === sector) &&
-        (!novelOnly || tr.dataset.hasNovel === '1') &&
         (!q || text.includes(q));
       tr.style.display = show ? '' : 'none';
     });
   };
 
-  const filterEls = [
-    countrySel,
-    document.getElementById('filter-outcome'),
-    sectorSel,
-    document.getElementById('filter-search'),
-    document.getElementById('filter-novel-only'),
-  ];
-  filterEls.forEach((el) => el?.addEventListener('input', apply));
-  filterEls.forEach((el) => el?.addEventListener('change', apply));
+  [countrySel, document.getElementById('filter-outcome'), sectorSel, document.getElementById('filter-search')]
+    .forEach((el) => el.addEventListener('input', apply));
   apply();
 }
 
