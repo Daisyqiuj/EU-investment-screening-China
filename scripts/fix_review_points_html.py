@@ -16,9 +16,10 @@ HTML = """<!DOCTYPE html>
     <p class="subtitle">追踪欧洲涉华 FDI 审查中<strong>首次出现</strong>的关注维度 · 与批准/禁止结果无关</p>
     <nav class="nav-bar">
       <a href="index.html">案例总览</a>
-      <a href="map.html">🗺 欧洲互动地图</a>
+      <a href="map.html">🗺 地图入口</a>
       <a href="review-points.html" class="active">🆕 新增审查风险提醒</a>
-      <a href="policy.html">政策与法律框架</a>
+      <a href="policy.html">审查规则背景</a>
+      <a href="contribute.html">✉️ 我要贡献案例</a>
     </nav>
   </header>
 

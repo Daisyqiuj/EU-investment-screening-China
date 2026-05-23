@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>我要贡献案例 — 涉华投资审查案例库</title>
+  <link rel="stylesheet" href="css/styles.css?v=20260523" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>我要贡献案例</h1>
+    <p class="subtitle">推荐您自身经历或所知企业案例 · 运营团队核实后将与您联系</p>
+    <nav class="nav-bar">
+      <a href="index.html">案例总览</a>
+      <a href="map.html">🗺 地图入口</a>
+      <a href="review-points.html">🆕 新增审查风险提醒</a>
+      <a href="policy.html">审查规则背景</a>
+      <a href="contribute.html" class="active">✉️ 我要贡献案例</a>
+    </nav>
+  </header>
+
+  <main class="container contribute-page">
+    <section class="card contribute-intro">
+      <h2>为什么需要您的推荐？</h2>
+      <p class="contrib-lead">
+        本库收录<strong>可公开核实</strong>的欧洲涉华 FDI 审查案例。许多交易细节仅存在于参与方与专业服务机构处。
+        若您或您的企业曾经历审查，或了解值得关注的案例，欢迎填写下方登记表——
+        <strong>运营人员会先了解初步情况，再与您联系</strong>，经来源核实后纳入资料库。
+      </p>
+      <ul class="contrib-bullets">
+        <li>推荐自身企业：在欧投资/并购遭遇审查的经历</li>
+        <li>推荐第三方：您所了解的其他企业公开或半公开案例</li>
+        <li>无需完整材料；有时间、国家、企业名称与简述即可发起</li>
+      </ul>
+    </section>
+
+    <div id="contrib-success" class="card contribute-success hidden">
+      <h2>感谢您的推荐</h2>
+      <p id="contrib-success-note">
+        我们已收到您的登记信息。案例库运营团队将在<strong>核实公开来源</strong>后与您联系，进一步补充细节。通常会在 5–10 个工作日内回复。
+      </p>
+      <p><a class="btn-map" href="index.html">返回案例总览</a></p>
+    </div>
+
+    <p id="contrib-error" class="contrib-error hidden" role="alert"></p>
+
+    <form id="contrib-form" class="contrib-form" novalidate>
+      <fieldset class="card contrib-fieldset">
+        <legend>一、推荐人信息</legend>
+        <div class="contrib-grid">
+          <label class="contrib-field">
+            <span>姓名 <em>*</em></span>
+            <input type="text" name="submitter_name" required autocomplete="name" placeholder="您的姓名" />
+          </label>
+          <label class="contrib-field">
+            <span>联系邮箱 <em>*</em></span>
+            <input type="email" name="submitter_email" required autocomplete="email" placeholder="便于运营人员回复" />
+          </label>
+          <label class="contrib-field">
+            <span>所在机构 / 企业</span>
+            <input type="text" name="submitter_org" autocomplete="organization" placeholder="公司或律所、咨询机构名称" />
+          </label>
+          <label class="contrib-field">
+            <span>联系电话</span>
+            <input type="tel" name="submitter_phone" autocomplete="tel" placeholder="选填" />
+          </label>
+          <label class="contrib-field contrib-field-full">
+            <span>职务 / 角色</span>
+            <input type="text" name="submitter_role" placeholder="如：投资总监、法务负责人、研究员" />
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card contrib-fieldset">
+        <legend>二、推荐类型</legend>
+        <div class="contrib-radio-group">
+          <label class="contrib-radio">
+            <input type="radio" name="relation_type" value="self" required />
+            <span class="contrib-radio-box">
+              <strong>自身企业经历</strong>
+              <small>我方或本人所在企业曾在欧洲涉及 FDI / 国家安全审查</small>
+            </span>
+          </label>
+          <label class="contrib-radio">
+            <input type="radio" name="relation_type" value="third_party" />
+            <span class="contrib-radio-box">
+              <strong>所知的第三方企业案例</strong>
+              <small>推荐其他企业/交易，本人非直接当事方</small>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card contrib-fieldset">
+        <legend>三、案例基本信息</legend>
+        <div class="contrib-grid">
+          <label class="contrib-field">
+            <span>涉及国家/地区 <em>*</em></span>
+            <input type="text" name="country" required placeholder="如：德国、荷兰、英国" />
+          </label>
+          <label class="contrib-field">
+            <span>目标企业（被审查方）<em>*</em></span>
+            <input type="text" name="target_company" required placeholder="欧洲目标公司或资产名称" />
+          </label>
+          <label class="contrib-field">
+            <span>中方投资者 / 收购方 <em>*</em></span>
+            <input type="text" name="investor" required placeholder="中国企业或投资主体名称" />
+          </label>
+          <label class="contrib-field">
+            <span>行业领域</span>
+            <input type="text" name="sector" placeholder="如：半导体、港口、医疗影像" />
+          </label>
+          <label class="contrib-field">
+            <span>交易类型</span>
+            <select name="deal_type">
+              <option value="">请选择（可选）</option>
+              <option>收购 / 并购</option>
+              <option>少数股权</option>
+              <option>绿地投资</option>
+              <option>技术许可 / 合资</option>
+              <option>治理权 / 股东安排</option>
+              <option>其他</option>
+            </select>
+          </label>
+          <label class="contrib-field">
+            <span>决定或发生时间</span>
+            <input type="text" name="decision_date" placeholder="如：2024-06 或 2023" />
+          </label>
+          <label class="contrib-field">
+            <span>审查结果（若已知）</span>
+            <select name="outcome">
+              <option value="">不确定 / 尚未公开</option>
+              <option>批准</option>
+              <option>附条件批准</option>
+              <option>禁止</option>
+              <option>交易失败 / 撤回</option>
+              <option>审查中</option>
+              <option>政府干预</option>
+            </select>
+          </label>
+          <label class="contrib-field contrib-field-full">
+            <span>案例简述 <em>*</em></span>
+            <textarea name="summary" required rows="5" maxlength="2000" placeholder="请概括交易背景、审查机关、主要关注点与结果（500 字以内为宜）"></textarea>
+          </label>
+          <label class="contrib-field contrib-field-full">
+            <span>公开来源链接</span>
+            <textarea name="sources" rows="2" placeholder="政府公告、媒体报道、律所解读等 URL（可多条，每行一个）"></textarea>
+          </label>
+          <label class="contrib-field contrib-field-full">
+            <span>补充说明</span>
+            <textarea name="notes" rows="2" placeholder="其他希望运营人员了解的信息；是否方便电话沟通等"></textarea>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="card contrib-fieldset contrib-consent">
+        <legend>四、确认与授权</legend>
+        <label class="contrib-check">
+          <input type="checkbox" name="consent_contact" required />
+          <span>我同意案例库运营团队通过上述联系方式与我核实信息，并理解<strong>入库须基于可公开查证的来源</strong>。</span>
+        </label>
+        <label class="contrib-check">
+          <input type="checkbox" name="consent_accuracy" required />
+          <span>我确认所填信息为本人所知，<strong>不含未经授权的商业秘密</strong>；涉及第三方时将尽量提供公开线索。</span>
+        </label>
+        <p class="contrib-privacy">您的联系方式仅用于案例核实，不会对外公开。案例入库时将标注公开来源，不披露推荐人身份（除非您另行同意）。</p>
+      </fieldset>
+
+      <label class="contrib-honeypot" aria-hidden="true">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+      </label>
+
+      <div class="contrib-actions">
+        <button type="submit" class="btn-map" id="contrib-submit">提交推荐</button>
+        <a class="btn-map btn-map-secondary" href="index.html">取消</a>
+      </div>
+    </form>
+
+    <div class="disclaimer">
+      本表仅供案例库运营内部使用，不构成法律意见。提交不代表案例将被收录；最终入库以公开来源核实为准。
+      运营联系：<a href="mailto:lujiazui_center@ceibs.edu">lujiazui_center@ceibs.edu</a>
+    </div>
+  </main>
+
+  <script type="module" src="js/contribute.js?v=20260523"></script>
+</body>
+</html>

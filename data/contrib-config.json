@@ -1,0 +1,5 @@
+{
+  "form_endpoint": "",
+  "operator_email": "lujiazui_center@ceibs.edu",
+  "_setup_note": "提交将经 FormSubmit 发送至 operator_email；若改用 Formspree，可填入 form_endpoint"
+}

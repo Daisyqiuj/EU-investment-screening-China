@@ -1650,6 +1650,195 @@ strong { color: var(--text); }
   color: var(--muted);
 }
 
+/* —— 贡献案例登记表 —— */
+.contribute-page .contrib-lead {
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.contrib-bullets {
+  margin-left: 1.25rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.contrib-bullets li { margin-bottom: 0.35rem; }
+
+.contrib-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contrib-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contrib-fieldset legend {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 0 0 0.75rem;
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+}
+
+.contrib-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .contrib-grid { grid-template-columns: 1fr; }
+}
+
+.contrib-field-full { grid-column: 1 / -1; }
+
+.contrib-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.contrib-field span em {
+  color: var(--coral);
+  font-style: normal;
+}
+
+.contrib-field input,
+.contrib-field select,
+.contrib-field textarea {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.55rem 0.75rem;
+  border-radius: var(--radius);
+  font-family: inherit;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.contrib-field input:focus,
+.contrib-field select:focus,
+.contrib-field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.2);
+}
+
+.contrib-field textarea { resize: vertical; min-height: 4.5rem; }
+
+.contrib-radio-group {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .contrib-radio-group { grid-template-columns: 1fr 1fr; }
+}
+
+.contrib-radio {
+  display: block;
+  cursor: pointer;
+}
+
+.contrib-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contrib-radio-box {
+  display: block;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface2);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.contrib-radio-box strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+.contrib-radio-box small {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.contrib-radio input:checked + .contrib-radio-box {
+  border-color: var(--accent);
+  background: rgba(79, 195, 247, 0.12);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.contrib-radio input:focus-visible + .contrib-radio-box {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.contrib-consent .contrib-check {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.contrib-check input {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
+.contrib-privacy {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+}
+
+.contrib-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.contrib-actions .btn-map { margin: 0; }
+
+.contrib-error {
+  padding: 0.85rem 1rem;
+  background: rgba(255, 112, 67, 0.15);
+  border: 1px solid var(--coral);
+  border-radius: var(--radius);
+  color: #FFAB91;
+  margin-bottom: 1rem;
+}
+
+.contrib-success h2 { color: var(--accent); margin-bottom: 0.75rem; }
+
+.contrib-honeypot {
+  position: absolute;
+  left: -9999px;
+  height: 0;
+  overflow: hidden;
+}
+
+.contrib-intro { border-left: 4px solid var(--accent); }
+
 /* 大屏展示优化 */
 @media (min-width: 1200px) {
   .container { max-width: 1400px; }
