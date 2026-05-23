@@ -104,7 +104,7 @@ function initCharts(stats) {
       datasets: [{
         label: '占比 %（2024）',
         data: [92, 8, 10, 2],
-        backgroundColor: [CHART_THEME.mint, CHART_THEME.coral, CHART_THEME.mintDark, '#C5B8E8'],
+        backgroundColor: [CHART_THEME.accent, CHART_THEME.warn, CHART_THEME.accentDark, '#81B4D9'],
         borderRadius: 8,
       }],
     },

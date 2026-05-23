@@ -1,13 +1,18 @@
-/** 治愈系 Chart.js 主题 v2 */
+/** 大屏深色主题 Chart.js 配色 */
 export const CHART_THEME = {
-  text: '#333333',
-  muted: '#5C6B66',
-  grid: 'rgba(142, 210, 186, 0.55)',
-  palette: ['#8ED2BA', '#FF8C94', '#B5E8D4', '#FFB8BE', '#6BB89E', '#E3F2F1', '#F0C987', '#C5B8E8'],
-  mint: '#8ED2BA',
-  mintDark: '#5FAF92',
-  coral: '#FF8C94',
-  coralDark: '#E06B74',
+  text: '#FFFFFF',
+  muted: '#B0B8C1',
+  grid: 'rgba(79, 195, 247, 0.12)',
+  palette: ['#4FC3F7', '#FF7043', '#29B6F6', '#FF8A65', '#81D4FA', '#3A4A5C', '#FFB74D', '#81B4D9'],
+  accent: '#4FC3F7',
+  accentDark: '#29B6F6',
+  warn: '#FF7043',
+  warnDark: '#F4511E',
+  // 兼容旧引用
+  mint: '#4FC3F7',
+  mintDark: '#29B6F6',
+  coral: '#FF7043',
+  coralDark: '#F4511E',
 };
 
 export function chartOptions(title) {

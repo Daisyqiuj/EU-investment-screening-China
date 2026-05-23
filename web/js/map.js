@@ -18,8 +18,8 @@ const GEOJSON_URL = 'data/europe.geojson';
 const EUROPE_BOUNDS = [[33, -25], [72, 45]];
 
 const SELECTED_STYLE = {
-  fillColor: '#FF8C94',
-  color: '#E06B74',
+  fillColor: '#4FC3F7',
+  color: '#29B6F6',
   weight: 2.5,
   opacity: 1,
   fillOpacity: 0.95,
@@ -184,7 +184,7 @@ async function initMap(counts) {
     maxBoundsViscosity: 0.85,
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a> | 边界 &copy; Natural Earth',
     subdomains: 'abcd',

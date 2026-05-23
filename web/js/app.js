@@ -3,15 +3,15 @@ import { CHART_THEME, chartOptions } from './chart-theme.js';
 import { initPodcast } from './podcast.js';
 
 const OUTCOME_COLORS = {
-  '禁止': '#FF8C94',
-  '附条件批准': '#F0C987',
-  '批准': '#8ED2BA',
-  '机制运行': '#C5B8E8',
-  '政府干预': '#FFB8BE',
-  '交易失败': '#F0C987',
-  '审查中': '#B5E8D4',
-  '无公开否决': '#8A9A94',
-  '限制参与': '#FF8C94',
+  '禁止': '#FF7043',
+  '附条件批准': '#FFB74D',
+  '批准': '#4FC3F7',
+  '机制运行': '#81B4D9',
+  '政府干预': '#FF8A65',
+  '交易失败': '#FFB74D',
+  '审查中': '#29B6F6',
+  '无公开否决': '#5A6A7C',
+  '限制参与': '#FF7043',
 };
 
 async function init() {
@@ -124,7 +124,7 @@ function renderCharts(data) {
       datasets: [{
         label: '案例数',
         data: Object.values(byCountry),
-        backgroundColor: CHART_THEME.mint,
+        backgroundColor: CHART_THEME.accent,
       }],
     },
     options: chartOptions('各国/地区案例数量'),
@@ -136,7 +136,7 @@ function renderCharts(data) {
       labels: Object.keys(byOutcome),
       datasets: [{
         data: Object.values(byOutcome),
-        backgroundColor: Object.keys(byOutcome).map((k) => OUTCOME_COLORS[k] || '#B5E8D4'),
+        backgroundColor: Object.keys(byOutcome).map((k) => OUTCOME_COLORS[k] || '#4FC3F7'),
       }],
     },
     options: { ...chartOptions('审查结果分布'), plugins: { legend: { position: 'right' } } },
@@ -162,7 +162,7 @@ function buildTimelineData(cases) {
       label: '案例数',
       data: sorted.map((y) => years[y]),
       borderColor: CHART_THEME.accent,
-      backgroundColor: 'rgba(142, 210, 186, 0.4)',
+      backgroundColor: 'rgba(79, 195, 247, 0.25)',
       fill: true,
       tension: 0.3,
     }],
